@@ -77,8 +77,8 @@ def show_list(list_id):
         db.session.commit()
         return redirect(url_for('show_list', list_id=list.id))
     form2 = DeleteItemForm
-    if form2.validate_on_submit():
-        list =
+    # if form2.validate_on_submit():
+    #     list =
     return render_template('list.html', title='Список '+list.listname, list=list, items=items, form1=form1)
 
 
